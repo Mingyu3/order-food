@@ -1,20 +1,22 @@
-import React from "react";
-import css from "./FoodList.module.css";
-import Card from "./UI/Card";
+import React from 'react';
+import FoodItem from './FoodItem';
+import css from './FoodList.module.css';
+import Card from './UI/Card';
 
 const FoodList = ({ foodData }) => {
+	const foodItems = foodData.map((item) => (
+		<FoodItem
+			key={item.id}
+			name={item.name}
+			price={item.price}
+			description={item.description}
+		/>
+	));
+
 	return (
-		<section className={css["food-list"]}>
+		<section className={css['food-list']}>
 			<Card>
-				<ul>
-					{foodData.map((item) => (
-						<li key={item.id}>
-							<h2>{item.name}</h2>
-							<p>{item.description}</p>
-							<p>{item.price}</p>
-						</li>
-					))}
-				</ul>
+				<ul>{foodItems}</ul>
 			</Card>
 		</section>
 	);
