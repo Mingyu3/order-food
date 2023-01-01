@@ -1,13 +1,40 @@
 import React from "react";
-import css from "./Content.module.css";
+import AdPhrase from "../AdPhrase";
+import FoodList from "../FoodList";
+
+const DUMMY_DATA = [
+	{
+		id: 1,
+		name: "딤섬 새우하가우",
+		description: "쫄깃한 투명피에 탱글한 새우",
+		price: 11000,
+	},
+	{
+		id: 2,aa
+		name: "하와이안 아사이볼",
+		description: "하와이 스타일의 신선한 과일이 들어간 아사이볼",
+		price: 8000,
+	},
+	{
+		id: 3,
+		name: "햄가득 부대전골",
+		description: "입맛 당기는 짭조름한 건더기가 가득해 자주 찾게 되는 부대찌개",
+		price: 10000,
+	},
+	{
+		id: 4,
+		name: "푸짐한 소고기 콩불",
+		description: "아삭한 콩나물과 쫄깃한 소고기에 칼칼한 감칠맛까지..",
+		price: 9000,
+	},
+];
 
 const Content = () => {
 	return (
-		<section className={css["food-summary"]}>
-			<h2>맛있는 음식과 빠른 배송</h2>
-			<p>좋아하는 음식을 골라 주문하고 집에서 맛있는 점심, 저녁을 드세요.</p>
-			<p>민스키친의 음식은 질 좋은 식재료를 이용해 충분한 경험이 있는 쉐프들이 요리합니다!</p>
-		</section>
+		<>
+			<AdPhrase />
+			<FoodList foodData={DUMMY_DATA} />
+		</>
 	);
 };
 
