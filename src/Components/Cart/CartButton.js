@@ -1,7 +1,7 @@
 import React from 'react';
-import css from './Cart.module.css';
+import css from './CartButton.module.css';
 
-function Cart() {
+function CartButton() {
 	return (
 		<button className={css.button}>
 			<span className='material-symbols-outlined'>shopping_cart</span>
@@ -10,4 +10,4 @@ function Cart() {
 	);
 }
 
-export default Cart;
+export default CartButton;

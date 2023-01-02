@@ -1,0 +1,29 @@
+form {
+	min-width: 6rem;
+	text-align: right;
+}
+
+.amount-label {
+	font-weight: bold;
+	margin-right: 1rem;
+}
+
+.input {
+	width: 2rem;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+.add-button {
+	border: none;
+	margin-top: 0.6rem;
+	padding: 0.5rem 1rem;
+	background-color: brown;
+	color: white;
+	border-radius: 35px;
+	cursor: pointer;
+}
+
+.add-button:hover {
+	background-color: #740909;
+}
