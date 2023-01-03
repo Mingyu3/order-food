@@ -15,9 +15,11 @@ form {
 }
 
 .add-button {
-	border: none;
+	border-style: none;
+	display: inline-block;
 	margin-top: 0.6rem;
-	padding: 0.5rem 1rem;
+	font-size: 0.8rem;
+	padding: 0.6rem 1.2rem;
 	background-color: brown;
 	color: white;
 	border-radius: 35px;

@@ -1,12 +1,24 @@
-import React from "react";
-import "./App.css";
-import Content from "./Components/Layout/Content";
-import Header from "./Components/Layout/Header";
+import React, { useState } from 'react';
+import './App.css';
+import Cart from './Components/Cart/Cart';
+import Content from './Components/Layout/Content';
+import Header from './Components/Layout/Header';
 
 function App() {
+	const [isShowCart, setIsShowCart] = useState(false);
+
+	const showCart = () => {
+		setIsShowCart(true);
+	};
+
+	const hideCart = () => {
+		setIsShowCart(false);
+	};
+
 	return (
 		<>
-			<Header />
+			{isShowCart && <Cart onHideCart={hideCart} />}
+			<Header onShowCart={showCart} />
 			<main>
 				<Content />
 			</main>

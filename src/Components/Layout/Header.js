@@ -1,17 +1,17 @@
-import React from "react";
-import css from "./Header.module.css";
-import Cart from "../Cart/Cart";
-import MainImg from "../../asset/food.jpg";
+import React from 'react';
+import css from './Header.module.css';
+import MainImg from '../../asset/food.jpg';
+import CartButton from '../Cart/CartButton';
 
-function Header() {
+function Header({ onShowCart }) {
 	return (
 		<>
 			<header>
 				<h2 className={css.title}>Min&apos;s Kitchen</h2>
-				<Cart />
+				<CartButton onShow={onShowCart} />
 			</header>
-			<div className={css["main-img"]}>
-				<img src={MainImg} alt="food" />
+			<div className={css['main-img']}>
+				<img src={MainImg} alt='food' />
 			</div>
 		</>
 	);
