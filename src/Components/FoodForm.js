@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useContext, useRef } from 'react';
+import CartContext from '../store/cart-context';
 import css from './FoodForm.module.css';
 
-const FoodForm = () => {
+const FoodForm = ({ name, price }) => {
+	const cartCtx = useContext(CartContext);
+	const amountRef = useRef(0);
+
+	const submitHandler = (e) => {
+		e.preventDefault();
+		const enteredAmount = +amountRef.current.value;
+
+		cartCtx.addItem({ name: name, price: price, amount: enteredAmount });
+	};
+
 	return (
-		<form>
+		<form onSubmit={submitHandler}>
 			<div>
 				<label className={css['amount-label']} htmlFor='amount'>
 					수량
 				</label>
 				<input
+					ref={amountRef}
 					className={css.input}
 					type='number'
 					id='amount'

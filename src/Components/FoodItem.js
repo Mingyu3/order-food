@@ -14,7 +14,7 @@ const FoodItem = ({ name, description, price }) => {
 				<div className={css.description}>{description}</div>
 				<div className={css.price}>{processedPrice} 원</div>
 			</div>
-			<FoodForm />
+			<FoodForm name={name} price={price} />
 		</li>
 	);
 };
