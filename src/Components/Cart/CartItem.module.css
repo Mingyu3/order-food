@@ -1,0 +1,43 @@
+.food {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.food h3 {
+	margin: 0 0 0.4rem 0;
+	padding: 0;
+}
+
+.detail {
+	width: 8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.price {
+	color: cadetblue;
+}
+
+.amount {
+	border-radius: 5px;
+	border: 2px solid lightgray;
+	padding: 0 0.4rem;
+}
+
+.buttons button {
+	cursor: pointer;
+	margin-left: 0.2rem;
+	border-radius: 10px;
+	width: 2rem;
+	border: 2px solid cadetblue;
+	font-size: 1.2rem;
+	background-color: white;
+}
+
+.buttons button:hover {
+	background-color: #225d61;
+	color: white;
+}
