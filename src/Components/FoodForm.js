@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react';
 import CartContext from '../store/cart-context';
 import css from './FoodForm.module.css';
 
-const FoodForm = ({ name, price }) => {
+const FoodForm = ({ id, name, price }) => {
 	const cartCtx = useContext(CartContext);
 	const amountRef = useRef(0);
 
@@ -10,7 +10,7 @@ const FoodForm = ({ name, price }) => {
 		e.preventDefault();
 		const enteredAmount = +amountRef.current.value;
 
-		cartCtx.addItem({ name: name, price: price, amount: enteredAmount });
+		cartCtx.addItem({ id, name: name, price: price, amount: enteredAmount });
 	};
 
 	return (

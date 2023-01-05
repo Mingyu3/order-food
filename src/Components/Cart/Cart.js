@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import CartContext from '../../store/cart-context';
 import Modal from '../UI/Modal';
 import css from './Cart.module.css';
 
 const Cart = ({ onHideCart }) => {
+	const cartCtx = useContext(CartContext);
+	const itemList = cartCtx.cartState.items.map((item) => (
+		<li key={item.id} className={css['each-food']}>
+			<span>{item.name}</span>
+			<span>{item.price}원</span>
+		</li>
+	));
+
 	return (
 		<Modal onHide={onHideCart}>
-			<ul className={css.food}>
-				<li className={css['each-food']}>
-					<span>name</span>
-					<span>원</span>
-				</li>
-			</ul>
+			<ul className={css.food}>{itemList}</ul>
 			<div className={css.total}>
 				<span>총합</span>
-				<span>원</span>
+				<span>{cartCtx.cartState.totalPrice}원</span>
 			</div>
 			<div className={css.buttons}>
 				<button className={css['order-btn']}>주문</button>

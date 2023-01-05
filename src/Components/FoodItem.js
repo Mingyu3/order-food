@@ -4,7 +4,7 @@ import css from './FoodItem.module.css';
 
 const insertCommas = (num) => num.toLocaleString('ko-KR');
 
-const FoodItem = ({ name, description, price }) => {
+const FoodItem = ({ id, name, description, price }) => {
 	const processedPrice = insertCommas(price);
 
 	return (
@@ -14,7 +14,7 @@ const FoodItem = ({ name, description, price }) => {
 				<div className={css.description}>{description}</div>
 				<div className={css.price}>{processedPrice} 원</div>
 			</div>
-			<FoodForm name={name} price={price} />
+			<FoodForm id={id} name={name} price={price} />
 		</li>
 	);
 };

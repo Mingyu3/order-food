@@ -8,7 +8,7 @@ function CartButton({ onShow }) {
 	return (
 		<button className={css.button} onClick={onShow}>
 			<span className='material-symbols-outlined'>shopping_cart</span>
-			<span className={css['cart-amount']}>{cartCtx.items.totalItems}</span>
+			<span className={css['cart-amount']}>{cartCtx.cartState.totalItems}</span>
 		</button>
 	);
 }
