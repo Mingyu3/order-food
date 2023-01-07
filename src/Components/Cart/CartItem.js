@@ -6,6 +6,8 @@ const CartItem = ({ item }) => {
 
 	const cartItemAddHandler = () => cartCtx.addItem({ ...item, amount: 1 });
 
+	const cartItemRemoveHandler = () => cartCtx.removeItem({ id: item.id });
+
 	return (
 		<li key={item.id} className={css.food}>
 			<div>
@@ -17,7 +19,7 @@ const CartItem = ({ item }) => {
 			</div>
 			<div className={css.buttons}>
 				<button onClick={cartItemAddHandler}>+</button>
-				<button>-</button>
+				<button onClick={cartItemRemoveHandler}>-</button>
 			</div>
 		</li>
 	);
