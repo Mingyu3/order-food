@@ -9,6 +9,18 @@
 	color: white;
 	padding: 1rem;
 	word-break: keep-all;
+	animation: fadeInNarrow 0.5s ease-out;
+}
+
+@keyframes fadeInNarrow {
+	from {
+		margin-top: -3rem;
+		opacity: 0;
+	}
+	to {
+		margin-top: -5rem;
+		opacity: 1;
+	}
 }
 
 .summary h2 {
@@ -22,5 +34,17 @@
 @media (min-width: 768px) {
 	.summary {
 		margin-top: -10rem;
+		animation: fadeInWide 0.3s ease-out;
+	}
+}
+
+@keyframes fadeInWide {
+	from {
+		margin-top: -8rem;
+		opacity: 0;
+	}
+	to {
+		margin-top: -10rem;
+		opacity: 1;
 	}
 }

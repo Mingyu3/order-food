@@ -17,3 +17,22 @@
 .cart-amount {
 	align-self: flex-end;
 }
+
+.shake {
+	animation: shake 0.4s ease-out;
+}
+
+@keyframes shake {
+	0% {
+		transform: scale(1);
+	}
+	40% {
+		transform: scale(0.9);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

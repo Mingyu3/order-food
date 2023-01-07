@@ -69,7 +69,9 @@ export const ContextProvider = (props) => {
 			value={{
 				addItem: addItemToCartHandler,
 				removeItem: removeItemFromCartHandler,
-				cartState: cartState,
+				items: cartState.items,
+				totalAmount: cartState.totalAmount,
+				totalPrice: cartState.totalPrice,
 			}}>
 			{props.children}
 		</CartContext.Provider>

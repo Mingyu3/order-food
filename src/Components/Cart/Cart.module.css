@@ -5,6 +5,11 @@
 	font-weight: bold;
 }
 
+.food h3 {
+	text-align: center;
+	margin: 2rem auto;
+}
+
 .total {
 	margin: 1rem 0;
 	display: flex;

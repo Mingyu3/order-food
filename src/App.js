@@ -6,20 +6,20 @@ import Header from './Components/Layout/Header';
 import { ContextProvider } from './store/cart-context';
 
 function App() {
-	const [isShowCart, setIsShowCart] = useState(false);
+	const [isShownCart, setIsShownCart] = useState(false);
 
 	const showCart = () => {
-		setIsShowCart(true);
+		setIsShownCart(true);
 	};
 
 	const hideCart = () => {
-		setIsShowCart(false);
+		setIsShownCart(false);
 	};
 
 	return (
 		<ContextProvider>
-			{isShowCart && <Cart onHideCart={hideCart} />}
-			<Header onShowCart={showCart} />
+			{isShownCart && <Cart onHideCart={hideCart} />}
+			<Header isShownCart={isShownCart} onShowCart={showCart} />
 			<main>
 				<Content />
 			</main>

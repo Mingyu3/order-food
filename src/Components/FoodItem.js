@@ -2,7 +2,7 @@ import React from 'react';
 import FoodForm from './FoodForm';
 import css from './FoodItem.module.css';
 
-const insertCommas = (num) => num.toLocaleString('ko-KR');
+export const insertCommas = (num) => num.toLocaleString('ko-KR');
 
 const FoodItem = ({ id, name, description, price }) => {
 	const processedPrice = insertCommas(price);
