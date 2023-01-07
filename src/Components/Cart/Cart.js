@@ -11,13 +11,7 @@ const Cart = ({ onHideCart }) => {
 		<Modal onHide={onHideCart}>
 			<ul className={css.food}>
 				{cartCtx.cartState.items.map((item) => (
-					<CartItem
-						key={item.id}
-						id={item.id}
-						name={item.name}
-						price={item.price}
-						amount={item.amount}
-					/>
+					<CartItem key={item.id} item={item} />
 				))}
 			</ul>
 			<div className={css.total}>

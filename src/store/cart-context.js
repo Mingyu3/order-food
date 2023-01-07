@@ -9,7 +9,7 @@ const cartReducer = (state, action) => {
 		case 'ADD':
 			{
 				const existingFoodIndex = state.items.findIndex(
-					(item) => item.id === action.item.id,
+					(element) => element.id === action.item.id,
 				);
 				const existingFood = state.items[existingFoodIndex];
 				if (existingFood) {
