@@ -4,6 +4,7 @@ import FoodList from '../FoodList';
 
 const Content = () => {
 	const [foodData, setFoodData] = useState([]);
+
 	const fetchData = async () => {
 		const food = [];
 		const response = await fetch(
